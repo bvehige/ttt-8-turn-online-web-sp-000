@@ -34,6 +34,7 @@ def position_taken?(board, index)
   end
 end
 
+<<<<<<< HEAD
 
 def turn(board)
   puts "Please enter 1-9:"
@@ -41,6 +42,15 @@ def turn(board)
   index = input_to_index(input)
   if !valid_move?(board, index)
   turn(board)
+=======
+def turn(board, index)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  valid_move?(board, index)
+  if !valid_move?(board, index)
+  turn(board, index)
+>>>>>>> 1a466148a77945f1165aee28efc39da92c35972b
   else
   move(board, index, character = "X")
   end
